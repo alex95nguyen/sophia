@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Fitness Studio | Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>ABC Fitness Studio</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="classes.html">Classes</a>
+        <a href="about.html">About Us</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Fitness Merchandise</h2>
+    <p>Take your workouts everywhere with official ABC Fitness Studio merchandise.</p>
+
+    <div class="cart-buttons">
+        <button onclick="viewCart()">View Cart</button>
+        <button onclick="clearCart()">Clear Cart</button>
+        <button onclick="processOrder()">Process Order</button>
+    </div>
+
+    <div class="gallery">
+        <div class="product">
+            <img src="images/Client2_TeeShirt.png" alt="ABC Fitness T-Shirt">
+            <h3>ABC Fitness T-Shirt</h3>
+            <p>$24.99</p>
+            <button onclick="addToCart('ABC Fitness T-Shirt')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Client2_WaterBottle.png" alt="ABC Fitness Water Bottle">
+            <h3>Water Bottle</h3>
+            <p>$14.99</p>
+            <button onclick="addToCart('Water Bottle')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/Client2_YogaMat.png" alt="ABC Fitness Yoga Mat">
+            <h3>Premium Yoga Mat</h3>
+            <p>$39.99</p>
+            <button onclick="addToCart('Premium Yoga Mat')">Add to Cart</button>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>Subscribe to our Newsletter</p>
+    <input type="email" placeholder="Email Address">
+    <button onclick="subscribe()">Subscribe</button>
+    <p>Follow us on Facebook | Instagram | YouTube</p>
+</footer>
+
+<div id="cartModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeCart()">&times;</span>
+        <h2>Shopping Cart</h2>
+        <div id="cartItems"></div>
+        <button onclick="clearCart()">Clear Cart</button>
+        <button onclick="processOrder()">Process Order</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
